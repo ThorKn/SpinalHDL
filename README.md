@@ -1,3 +1,7 @@
+## Patched SpinalHDL Version for Synthesis with Yosys and ECP5 as target
+
+This version of SpinalHDL is patched for synth_ecp5 with yosys. The statemachine (fsm) in the JtagBridge won't synthezise correctly without the Verilog Attribute fsm_encode="none. So this version of SpinalHDL adds this attribute to the state-register in the class JtagFsm (file JtagTap.scala, line 50).
+
 ## About SpinalHDL
 
 SpinalHDL is:
